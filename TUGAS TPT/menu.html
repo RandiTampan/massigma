@@ -1,0 +1,276 @@
+<head>
+  <!-- Link ke Google Fonts untuk menggunakan font khusus -->
+  <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
+</head>
+<style>
+  /* Styling untuk container utama menu */
+  .menu-container {
+    background-color: rgba(82, 153, 119, 1);
+    display: flex;
+    max-width: 480px; /* Lebar maksimal untuk memastikan responsif */
+    width: 100%;
+    padding: 0 0 37px;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0 auto;  /* Pusatkan menu */
+  }
+  
+  /* Header bagian atas */
+  .header-wrapper {
+    background-color: rgba(82, 153, 119, 1);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 5px 8px 16px; /* Padding untuk spasi di sekitar elemen */
+  }
+  
+  /* Kontainer untuk logo */
+  .logo-container {
+    display: flex;
+    margin-left: 12px;
+    gap: 320px; /* Jarak antara logo */
+  }
+  
+  /* Ukuran logo utama */
+  .logo {
+    aspect-ratio: 2.62; /* Rasio aspek untuk menjaga proporsi */
+    object-fit: contain;
+    width: 34px; /* Ukuran logo */
+  }
+  
+  /* Ukuran logo merek */
+  .brand {
+    aspect-ratio: 5.46;
+    object-fit: contain;
+    width: 82px;
+    border-radius: 0; /* Tidak ada sudut melengkung */
+  }
+  
+  /* Tombol kembali */
+  .back-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px; /* Ukuran font tombol */
+    padding: 25px 8px 1px; /* Spasi di sekitar tombol */
+   }
+    
+  .back-button {
+    background-color: #fff;
+    border-radius: 50%; /* Membuat tombol berbentuk lingkaran */
+    width: 52px; /* Lebar tombol */
+    height: 52px; /* Tinggi tombol */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Pusatkan ikon di tombol */
+    cursor: pointer;
+    font-size: 47px; /* Ukuran font ikon */
+    padding: 1px 3px 19px;
+    font-family: 'Darumadrop One', sans-serif; /* Gunakan font khusus */
+  }
+
+   /* Judul utama menu */
+  .menu-title {
+    border-radius: 18px; /* Sudut melengkung */
+    background-color: #fff; /* Latar belakang putih */
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.45); /* Bayangan untuk efek elevasi */
+    align-self: center; /* Pusatkan secara horizontal */
+    width: 250px; /* Lebar maksimal */
+    max-width: 100%;
+    color: #000; /* Warna teks hitam */
+    padding: 4px 40px; /* Padding untuk ruang di dalam elemen */
+    font: 400 36px Darumadrop One, sans-serif; /* Gunakan font khusus */
+    border: 1px solid #000; /* Batas hitam */
+  }
+  
+  /* Gaya untuk setiap item menu */
+  .menu-item {
+    border-radius: 10px; /* Sudut melengkung */
+    background-color: #fff; /* Latar belakang putih */
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); /* Bayangan untuk elevasi */
+    display: flex;
+    margin-top: 15px; /* Jarak antar item menu */
+    width: 430px; /* Lebar item */
+    max-width: 100%;
+    padding-right: 8px; /* Padding di kanan */
+    gap: 9px; /* Jarak antar elemen di dalam item */
+    color: #000; /* Warna teks hitam */
+    font: 300 20px Darumadrop One, sans-serif; /* Gunakan font khusus */
+    border: 1.55px solid #000; /* Batas hitam */
+  }
+  
+  /* Badge untuk tingkat kesulitan */
+  .difficulty-badge {
+    border-radius: 8px; /* Sudut melengkung */
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); /* Bayangan untuk efek elevasi */
+    padding: 2px 8px 15px; /* Spasi di dalam badge */
+    border: 1px solid #000; /* Batas hitam */
+    font-size: 25px; /* Ukuran font */
+  }
+  
+  /* Warna untuk tingkat kesulitan EASY atau HARD */
+  .easy-green {
+    background-color: rgba(154, 232, 149, 1);
+    transform: rotate(-0.0008841322490300944rad);
+  }
+  
+  .hard-orange {
+    background-color: rgba(255, 136, 62, 1);
+    transform: rotate(0.0026308870858459525rad);
+  }
+  .easy-yellow {
+    background-color: #b2b474;
+    transform: rotate(-0.0008841322490300944rad);
+  }
+  .hard-purple {
+    background-color: #c494af;
+    transform: rotate(-0.0008841322490300944rad);
+  }
+  .easy-blue {
+    background-color: #9bccd0;
+    transform: rotate(-0.0008841322490300944rad);
+  }
+  .easy-violet {
+    background-color: #6e82ff;
+    transform: rotate(-0.0008841322490300944rad);
+  }
+  .easy-pink {
+    background-color: #ee6158 ;
+    transform: rotate(-0.0008841322490300944rad);
+  }
+  .easy-darkblue {
+    background-color: #47bcf3;
+    transform: rotate(-0.0008841322490300944rad);
+  }
+  .hard-darkpurple {
+    background-color: #a534e7;
+    transform: rotate(-0.0008841322490300944rad);
+  }
+  .hard-red {
+    background-color: #d92931;
+    transform: rotate(-0.0008841322490300944rad);
+  }
+  
+  /* Judul resep */
+  .recipe-title {
+    margin: auto 0; /* Pusatkan secara vertikal */
+    padding: 2px 8px 15px; /* Spasi di dalam judul */
+    font-size: 25px; /* Ukuran font */
+  }
+  
+   /* Gambar resep */
+  .recipe-image {
+    width: 100%; /* Lebar penuh */
+    height: auto; /* Tinggi menyesuaikan */
+    object-fit: cover; /* Menyesuaikan gambar dengan area */
+  }
+  </style>
+  
+  <section class="menu-container" role="main" aria-label="Recipe Menu">
+    <!-- Header -->
+    <div class="header-wrapper">
+      <div class="logo-container">
+         <!-- Logo menu -->
+        <img 
+          src="https://cdn.builder.io/api/v1/image/assets/5ebb4996bcdb4f6db698a2f89422c915/f64bbcd5be540bc7024a62212c74108ee8fd06f8b0c208e0441d25b975dba817?apiKey=5ebb4996bcdb4f6db698a2f89422c915&" alt="Menu Logo" class="logo"
+          class="nav-icon"
+          alt="Navigation menu"
+          role="button"
+          tabindex="0"
+        />
+         <!-- Logo merek -->
+        <img 
+          src="https://cdn.builder.io/api/v1/image/assets/5ebb4996bcdb4f6db698a2f89422c915/c9dbe7f213be0d94ec7e47db60c4d4ed0e0cfb92abd5f3522232708ec129eb84?apiKey=5ebb4996bcdb4f6db698a2f89422c915&" alt="Brand Logo" class="brand"
+          class="prifile-icon"
+          alt="User profile"
+          role="button"
+          tabindex="0"
+        />
+      </div>
+      
+       <!-- Tombol kembali -->
+      <div class="back-button-wrapper">
+        <button class="back-button" aria-label="Go back">
+          <span aria-hidden="true"
+          type="button"
+          onclick="location.href='index.html'">&lt;</span>
+        </button>
+      </div>
+
+      <!-- Judul menu -->
+      <h1 class="menu-title">Menu Sobat Kos</h1>
+
+      <!-- Item menu resep -->
+      <article class="menu-item"
+         type="button"
+         onclick="location.href='tempe orek.html'">
+        <span class="difficulty-badge easy-green">EASY</span>
+        <h2 class="recipe-title">Tempe Orek Khas Ngawi</h2>
+      </article>
+  
+      <!-- Ulangi untuk setiap item menu -->
+      <article class="menu-item"
+         type="button"
+         onclick="location.href='cumi pedas salty.html'">
+        <span class="difficulty-badge hard-orange">HARD</span>
+        <h2 class="recipe-title">Cumi-Cumi Pedas Salty</h2>
+      </article>
+  
+      <article class="menu-item"
+         type="button"
+         onclick="location.href='ebi furai.html'">
+        <span class="difficulty-badge easy-yellow">EASY</span>
+        <h2 class="recipe-title">Ebi Furai</h2>
+      </article>
+  
+      <article class="menu-item"
+         type="button"
+         onclick="location.href='bihun kuah .html'">
+        <span class="difficulty-badge hard-purple">HARD</span>
+        <h2 class="recipe-title">Bihun Kuah Rice Coker</h2>
+      </article>
+  
+      <article class="menu-item"
+         type="button"
+         onclick="location.href='tumis buncis.html'">
+        <span class="difficulty-badge easy-blue">EASY</span>
+        <h2 class="recipe-title">Tumis Buncis Jagung Muda</h2>
+      </article>
+  
+      <article class="menu-item"
+         type="button"
+         onclick="location.href='tumis tahu.html'">
+        <span class="difficulty-badge easy-violet">EASY</span>
+        <h2 class="recipe-title">Tumis Tahu kan</h2>
+      </article>
+  
+      <article class="menu-item"
+         type="button"
+         onclick="location.href='tahu kecap.html'">
+        <span class="difficulty-badge easy-pink">EASY</span>
+        <h2 class="recipe-title">Tahu Kecap Pedas<br>Manis an kmu</h2>
+      </article>
+  
+      <article class="menu-item"
+         type="button"
+         onclick="location.href='capcay simple.html'">
+        <span class="difficulty-badge easy-darkblue">EASY</span>
+        <h2 class="recipe-title">Capcay Simple</h2>
+      </article>
+  
+      <article class="menu-item"
+         type="button"
+         onclick="location.href='es timun serut.html'">
+        <span class="difficulty-badge hard-darkpurple">HARD</span>
+        <h2 class="recipe-title">Es Timun Serut</h2>
+      </article>
+  
+      <article class="menu-item"
+         type="button"
+         onclick="location.href='chicken katsu.html'">
+        <span class="difficulty-badge hard-red">HARD</span>
+        <h2 class="recipe-title">Chicken Katsu Curry</h2>
+      </article>
+    </div>
+     <!-- Tambahkan item lain di sini -->
+  </section>

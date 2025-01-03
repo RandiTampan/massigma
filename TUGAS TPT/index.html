@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Mengimpor font "Irish Grover" dari Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+</head>
+<style>
+    /* Kontainer utama untuk halaman resep */
+    .recipe-container {
+      background-color: #519674; /* Warna latar hijau */
+      display: flex; /* Menggunakan flexbox untuk tata letak */
+      max-width: 480px; /* Lebar maksimum kontainer */
+      width: 100%; /* Lebar penuh pada perangkat kecil */
+      flex-direction: column; /* Elemen diatur secara vertikal */
+      overflow: hidden; /* Menyembunyikan elemen yang keluar dari kontainer */
+      align-items: center; /* Memusatkan elemen secara horizontal */
+      margin: 0 auto; /* Memposisikan kontainer di tengah */
+      padding: 16px 7px 95px 28px; /* Ruang dalam kontainer */
+      border: 1px solid #b05c5c; /* Warna border merah */
+    }
+    
+    /* Gaya untuk header navigasi */
+    .header-navigation {
+      align-self: stretch; /* Memenuhi lebar kontainer induk */
+      display: flex; /* Tata letak fleksibel */
+      gap: 20px; /* Jarak antar ikon */
+      justify-content: space-between; /* Elemen berada di ujung kiri dan kanan */
+    }
+    
+    /* Gaya untuk ikon navigasi */
+    .nav-icon {
+      aspect-ratio: 2.75; /* Proporsi lebar ke tinggi */
+      object-fit: contain; /* Memastikan gambar tidak terpotong */
+      object-position: center; /* Memusatkan gambar */
+      width: 33px; /* Lebar tetap */
+      align-self: start; /* Berada di bagian atas kontainer */
+    }
+    
+    /* Gaya untuk ikon profil */
+    .profile-icon {
+      aspect-ratio: 5.85; /* Proporsi ikon profil */
+      object-fit: contain; /* Gambar tetap sesuai skala */
+      object-position: center; /* Memusatkan ikon */
+      width: 82px; /* Lebar tetap */
+      border-radius: 0; /* Tanpa sudut membulat */
+    }
+    
+    /* Gaya untuk pesan utama */
+    .recipe-prompt {
+      border-radius: 30px; /* Sudut membulat */
+      background-color: #CDCDC3; /* Warna latar abu-abu muda */
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); /* Efek bayangan */
+      margin-top: 185px; /* Margin atas */
+      width: 100%; /* Lebar penuh */
+      max-width: 304px; /* Lebar maksimum */
+      color: #2e4156; /* Warna teks gelap */
+      text-align: center; /* Teks rata tengah */
+      padding: 46px 40px; /* Ruang dalam elemen */
+      font: 400 48px Irish Grover, sans-serif; /* Gaya teks */
+      border: 1px solid #000; /* Border hitam */
+    }
+    
+    /* Gaya untuk tombol aksi */
+    .action-button {
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); /* Efek bayangan pada teks */
+      border-radius: 60px; /* Sudut membulat */
+      background-color: #cdcdc3; /* Warna latar abu-abu */
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); /* Efek bayangan */
+      margin-top: 185px; /* Margin atas */
+      width: 242px; /* Lebar tetap */
+      max-width: 100%; /* Lebar penuh pada perangkat kecil */
+      color: #2e4256; /* Warna teks gelap */
+      white-space: nowrap; /* Teks tidak terpotong */
+      padding: 7px 70px; /* Ruang dalam elemen */
+      font: 400 36px Darumadrop One, sans-serif; /* Gaya teks */
+      border: 1px solid #000; /* Border hitam */
+      cursor: pointer; /* Kursor berubah menjadi tangan saat diarahkan */
+    }
+    
+    /* Gaya untuk elemen yang tersembunyi secara visual */
+    .visually-hidden {
+      position: absolute; /* Posisi absolut untuk keluar dari aliran dokumen */
+      width: 1px; /* Lebar kecil */
+      height: 1px; /* Tinggi kecil */
+      padding: 0; /* Tanpa padding */
+      margin: -1px; /* Margin negatif untuk menyembunyikan elemen */
+      overflow: hidden; /* Menyembunyikan konten */
+      clip: rect(0, 0, 0, 0); /* Klip area elemen */
+      border: 0; /* Tanpa border */
+    }
+</style>
+
+<!-- Konten utama halaman -->
+<main class="recipe-container">
+  <!-- Navigasi header -->
+  <nav class="header-navigation" role="navigation">
+    <!-- Ikon navigasi -->
+    <img
+      src="https://cdn.builder.io/api/v1/image/assets/5ebb4996bcdb4f6db698a2f89422c915/7617704f3f4d48c5c5fcbcb70888cfe9d9ac2214c902d977231724095e0373f1?apiKey=5ebb4996bcdb4f6db698a2f89422c915&"
+      class="nav-icon"
+      alt="Navigation menu"
+      role="button"
+      tabindex="0"
+    />
+    <!-- Ikon profil -->
+    <img
+      src="https://cdn.builder.io/api/v1/image/assets/5ebb4996bcdb4f6db698a2f89422c915/bfd4ec8ae809c0b42a58e70813a3fd93d451b08c73bbf16f04419b9718bd9e8b?apiKey=5ebb4996bcdb4f6db698a2f89422c915&"
+      class="profile-icon"
+      alt="User profile"
+      role="button"
+      tabindex="0"
+    />
+  </nav>
+  
+  <!-- Pesan utama untuk pengguna -->
+  <h1 class="recipe-prompt">
+    MAU MASAK APA HARI INI SOBAT SIGMA
+  </h1>
+  
+  <!-- Tombol untuk navigasi ke halaman berikutnya -->
+  <button
+    class="action-button" 
+    type="button"
+    onclick="location.href='menu.html'">
+    NEXT
+  </button>
+</main>
